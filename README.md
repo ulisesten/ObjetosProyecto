@@ -1,5 +1,5 @@
 # ObjetosProyecto
-Proyecto de la materia Programacion orientada a objetos
+Proyecto Programación Orientada a Objetos
 
 Ulises Martínez Elías
 
