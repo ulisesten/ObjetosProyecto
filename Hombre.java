@@ -17,6 +17,7 @@ public class Hombre extends Jugador
     
     public Hombre()
     {
+        
         ImgDer= new GreenfootImage("MaleRight1.png");
         ImgIzq= new GreenfootImage("MaleLeft1.png");
         ImgUp= new GreenfootImage("MaleUp1.png");
@@ -31,61 +32,47 @@ public class Hombre extends Jugador
     public void mueve()
     {
         int x=getX();
-        int y=getY(); 
+        int y=getY();
         
-        if( Greenfoot.isKeyDown("left") )//Izquierda
-        {
-            setLocation(x-1,y);
-            wait(5);
-            move(-10);
-            if(getImage()==ImgIzq)
-            setImage(ImgIzq);
-            
-            //walkLeft(pasos);            
+        if( Greenfoot.isKeyDown("left") ){
+            mueveIzq(x,y);
         }
-        if( Greenfoot.isKeyDown("right") )//Derecha
-        {
-            setLocation(x+1,y);
-            wait(5);
-            move(10);
-           // walkRight(pasos);            
+        if( Greenfoot.isKeyDown("right") ){
+            mueveDer(x,y);
         }
-        if( Greenfoot.isKeyDown("up") )//Arriba
-        {
-            setLocation(x,y-10);
-            wait(5);
-            
-           // walkUp(pasos);
+        if( Greenfoot.isKeyDown("up") ){
+            mueveUp(x,y);
         }
-        if( Greenfoot.isKeyDown("down") )//Abajo
-        {
-            setLocation(x,y+10);
-            wait(5);
-            
-           // walkDown(pasos);
+        if( Greenfoot.isKeyDown("down") ){
+            mueveDown(x,y);
         }    
-        
-        /*int y=getY();
-        mueveder();
-        muveizq();
-        
-        if(Greenfoot.isKeyDown("up"))
-        y--;
-        
-        if(Greenfoot.isKeyDown("down"))
-        y++;
-        setLocation(getX(),y);*/
     }
     
-    public void mueveder()
+    public void mueveIzq(int x,int y)
     {
-        if(Greenfoot.isKeyDown("right"))
-        move(1);
+        setLocation(x-1,y);
+        wait(5);
+        move(-10);
+        setImage(ImgIzq);
     }
     
-    public void muveizq()
+    public void mueveDer(int x,int y)
     {
-        if(Greenfoot.isKeyDown("left"))
-        move(-1);
+        setLocation(x+1,y);
+        wait(5);
+        move(10);
+        setImage(ImgDer);
+    }
+    
+    public void mueveUp(int x,int y){
+        setLocation(x,y-10);
+            wait(5);
+            setImage(ImgUp);
+    }
+    
+    public void mueveDown(int x,int y){
+        setLocation(x,y+10);
+            wait(5);
+            setImage(ImgDown);
     }
 }
