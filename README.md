@@ -5,4 +5,5 @@ Ulises Martínez Elías
 
 Abimael NoSeQue
 
-9/05/16
+Fecha de inicio:
+9 de mayo del 2016
