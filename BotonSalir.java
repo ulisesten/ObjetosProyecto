@@ -8,12 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BotonSalir extends Actor
 {
-    /**
-     * Act - do whatever the BotonSalir wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private GreenfootImage img0;
     public void act() 
     {
-        // Add your action code here.
+        img0=new GreenfootImage("botonSalir0.png");
+        setImage(img0);
     }    
 }

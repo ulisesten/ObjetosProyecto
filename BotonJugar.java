@@ -11,7 +11,7 @@ public class BotonJugar extends Actor
     private GreenfootImage bJugar;
     public void act() 
     {
-        bJugar=new GreenfootImage("botonJugar1.png");
+        bJugar=new GreenfootImage("botonJugar0.png");
     
         setImage(bJugar);
     }    
